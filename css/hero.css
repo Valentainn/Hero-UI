@@ -10,7 +10,7 @@ body{
     margin: 0;
 }
 .hero{
-    background-image: url(../img/loki-mobile.avif);
+    background-image: url(../img/loki.avif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -77,7 +77,7 @@ button:active {
 @media screen and (min-width: 1230px) {
     .hero {
         background-color: var(--black);
-        background-image: url(/img/loki.avif);
+        /* background-image: url(/img/loki.avif); */
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 128px), 0 100%);
     }
     .hero::before {
