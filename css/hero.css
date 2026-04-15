@@ -1,0 +1,106 @@
+:root {
+    --black: rgba(32, 32, 32, 1);
+    --white: rgba(255, 255, 255, 1);
+    --primary: rgba(27, 144, 252, 1);
+    --h1: 'Roboto Condensed', sans-serif;
+    --content: 'Roboto', sans-serif;
+    --button: 'Roboto', sans-serif;
+}
+body{
+    margin: 0;
+}
+.hero{
+    background-image: url(../img/loki-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.hero::before{
+    content: "";
+        background-color: var(--black);
+        display: block;
+        position: absolute;
+        block-size: 576px;
+        max-block-size: 150%;
+        inline-size: 100%;
+        inset-block: 449px;
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 80px), 0 100%);
+}
+.wrapper{
+    max-inline-size: 1664px;
+    margin: auto;
+}
+.hero-content{
+    block-size: 450px;
+    position: relative;
+    top: 520px;
+}
+.card{
+    max-inline-size: 640px;
+    position: relative;
+    margin: auto;
+}
+.card img{
+    margin-block-end: 25px;
+}
+p, h1 {
+    margin: 0;
+}
+.hero h1 {
+    font-family: var(--h1);
+    font-size: 40px;
+    color: var(--white);
+    margin-block-end: 8px;
+}
+.hero p {
+    font-family: var(--content);
+    font-size: 17px;
+    color: var(--white);
+    line-height: 25px;
+    margin-block-end: 25px;
+}
+.hero button {
+    font-family: var(--button);
+    color: var(--white);
+    font-size: 15px;
+    padding-block: 16px;
+    inline-size: 100%;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--primary);
+    cursor: pointer;
+}
+button:active {
+    transform: scale(.9);
+}
+@media screen and (min-width: 1230px) {
+    .hero {
+        background-color: var(--black);
+        background-image: url(/img/loki.jpg);
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 128px), 0 100%);
+    }
+    .hero::before {
+        block-size: 100%;
+        inline-size: 50%;
+        inset-block: 0;
+        z-index: 1;
+        clip-path: polygon(0 0, calc(100% - 151px) 0, 100% 100%, 0 100%);
+    }
+    .hero-content {
+        display: flex;
+        align-items: center;
+        block-size: 1024px;
+        position: static;
+    }
+    .card {
+        max-inline-size: 428px;
+        margin: 0;
+        margin-inline-start: 128px;
+        z-index: 2;
+    }
+    .hero button{
+        inline-size: fit-content;
+        padding-inline: 32px;
+    }
+}
